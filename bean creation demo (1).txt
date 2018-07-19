@@ -1,0 +1,42 @@
+beancreationdemo - Maven Quickstart project
+============================================
+pom.xml
+--------
+ <dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-core</artifactId>
+    <version>4.3.2.RELEASE</version>
+    </dependency>
+    <dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context</artifactId>
+    <version>4.3.2.RELEASE</version>
+    </dependency>
+
+create a class "HelloWorld"
+--------------------------
+package com.niit.beancreationdemo;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class HelloWorld {
+public String sayHello(){
+	return "Welcome to the world of Spring Framework";
+}
+
+}
+
+
+Rightclick on project -> New -> XML -> XML File ->beans.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:c="http://www.springframework.org/schema/c"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean name="helloWorld" class="com.niit.beancreationdemo.HelloWorld" ></bean>
+</beans>
+
+
